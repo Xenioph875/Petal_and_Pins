@@ -1,0 +1,106 @@
+*{
+    margin:0;
+}
+
+/* 
+Colors:
+    #e55936 (salmonish red)
+    #f8ebdd (cream)
+    #b4b9a5 (muted sage)
+    #d0bfae (ligth grey)
+    gold lol
+    #c7d3d8 (powder blue)
+*/
+
+nav{
+    display:flex;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8ebdd;
+}
+
+nav a{
+    font-size:2em;
+    text-decoration: none;
+    color:black;
+}
+
+nav a:hover{
+    color:rgb(197, 168, 0);
+}
+
+.hero-image img{
+    height:auto;
+    width:100%;
+}
+
+body{
+    background-color: #c7d3d8;
+} 
+
+
+/* ========================== index =========================== */
+.services{
+    display:flex;
+    justify-content:space-around;
+    gap:50px;
+}
+
+.sewing, .flowers, .other{
+    background-color: #e55936;
+    border:5px solid black;
+    border-radius: 200px 200px 0 0;
+    text-align: center;
+    align-content: center;
+    height:350px;
+    width:250px;
+}
+
+
+/* ======================= Stitchery ========================== */
+.collections{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap:10%;
+    
+}
+
+#fireworks_card, #western_card, #outdoors_card, #custom_card{
+    background-color:#e55936;
+    width:100%;
+    border-radius:50px;
+    align-content:center;
+    justify-items: center;
+}
+
+.dot{
+    width:15px;
+    height:15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display:inline-block;
+    cursor:pointer;
+    margin:25px 2px;
+}
+
+.dot:hover, .active{
+    background-color: lightgrey;
+}
+
+.prev:hover, .next:hover{
+    cursor:pointer;
+    background-color: grey;
+}
+
+footer{
+    background-color: #f8ebdd;
+    justify-items: center;
+    align-content: center;
+    height:150px;
+}
+
+footer h1,h3{
+    margin-bottom:10px;
+}

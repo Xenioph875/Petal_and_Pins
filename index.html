@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal & Pins</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><div>Home</div></a>
+            <a href="stitchery.html"><div>Stitchery</div></a>
+            <img src="images/petal_and_pins_logo.jpeg" alt="Petal & Pins" style="height:150px">
+            <a href="pressed_flowers.html"><div>Pressed Petals</div></a>
+            <a href="other.html"><div>Other</div></a>
+        </nav>
+        <div class="hero-image">
+            <img src="images/index-hero.jpeg" alt="place-holder">
+        </div> 
+    </header>
+    <main>
+        <h1 style="margin:50px 0">Services:</h1>
+        <div class="services">
+            
+            <div class="sewing">
+                <img alt="sewing stuff">
+                <div class="overlay">
+                    <p>This is a description of everything she does related to sewing.</p>
+                </div>
+                <h3>Sewing</h3>
+            </div>
+            <div class="flowers">
+                <img alt="flower stuff">
+                <div class="overlay">
+                    <p>This is a description of everything she does related to flowers.</p>
+                </div>
+                <h3>Flowers</h3>
+            </div>
+            <div class="other">
+                <img alt="other stuff">
+                <div class="overlay">
+                    <p>This is a description of other things she does.</p>
+                </div>
+                <h3>Other</h3>
+            </div>
+        </div>
+        <div #about_me>
+            <div class="about_me_slide">
+                <img alt="img1">
+                <div class="about_me_text">
+                    <h1>About Me!</h1>
+                    <p>words, words, and more words</p>
+                </div>
+            </div>
+            <div class="about_me_slide">
+                <img alt="img2">
+                <div class="how_it_started_text">
+                    <h1>How it all started...</h1>
+                    <p>words, words, and more words</p>
+                </div>
+            </div>
+            <div class="about_me_slide">
+                <img alt="img3">
+                <div class="purpose_text">
+                    <h1>Purpose!</h1>
+                    <p>words, words, and more words</p>
+                </div>
+            </div>
+            <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+            <a class="prev" onclick="moveSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </main>
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex)
+
+        function currentSlide(n){
+            showSlide(slideIndex = n);
+        }
+
+        function moveSlides(n){
+            showSlide(slideIndex += n)
+        }
+
+        function showSlide(index){
+            let i;
+            let slides = document.getElementsByClassName("about_me_slide");
+            let dots = document.getElementsByClassName("dot")
+
+            if (index > slides.length) {slideIndex = 1}
+            if (index < 1) {slideIndex = slides.length}
+
+            for(i = 0;i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for(i = 0;i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+    <footer>
+        <h1>Petal & Pins</h1>
+        <h3>email</h3>
+        <div class="socials">
+            <img alt="facebook">
+            <img alt="instagram">
+            <img alt="tik tok">
+            <img alt="youtube">
+        </div>
+    </footer>
+</body>
+</html> 

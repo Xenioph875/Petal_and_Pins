@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressed Flowers</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><div>Home</div></a>
+            <a href="stitchery.html"><div>Stitchery</div></a>
+            <img src="images/petal_and_pins_logo.jpeg" alt="Petal & Pins" style="height:150px">
+            <a href="pressed_flowers.html"><div>Pressed Petals</div></a>
+            <a href="other.html"><div>Other</div></a>
+        </nav>
+        <div class="hero-image">
+            <img src="images/pressed-petals-hero.jpeg" alt="place-holder" >
+        </div>
+    </header>
+    <main>
+        <div id="latest_creation">
+            <h1>My Lastest Creations</h1>
+            <div class="last_creations_container">
+                <div class="floral_slides">
+                    <img alt="bouquet">
+                    <img alt="bouquet">
+                    <img alt="bouquet">
+                </div>
+                <div class="floral_slides">
+                    <img alt="roses">
+                    <img alt="roses">
+                    <img alt="roses">
+                </div>
+                <div class="floral_slides">
+                    <img alt="flowers">
+                    <img alt="flowers">
+                    <img alt="flowers">
+                </div>
+                <a class="prev" onclick="moveSlides(-1, 0)">&#10094;</a>
+                <a class="prev" onclick="moveSlides(1, 0)">&#10095;</a>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, 0)"></span>
+                    <span class="dot" onclick="currentSlide(2, 0)"></span>
+                    <span class="dot" onclick="currentSlide(2, 0)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="image_banners">
+            <div class="slide1_container">
+                <img alt="pretty fwower">
+                <div class="text_container">
+                    <div class="slide1">
+                        <h1>Title1</h1>
+                        <p>lots of words about flowers</p>
+                    </div>
+                    <div class="slide1">
+                        <h1>Price</h1>
+                        <p>lots of words about the price of flowers</p>
+                    </div>
+                    <a class="prev" onclick="moveSlides(-1, 1)">&#10094;</a>
+                    <a class="prev" onclick="moveSlides(1, 1)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 1)"></span>
+                        <span class="dot" onclick="currentSlide(2, 1)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide2_container">
+                <div class="text_container">
+                    <div class="slide2">
+                        <h1>Title2</h1>
+                        <p>lots of words about flowers</p>
+                    </div>
+                    <div class="slide2">
+                        <h1>Price</h1>
+                        <p>lots of words about the price of flowers</p>
+                    </div>
+                    <a class="prev" onclick="moveSlides(-1, 2)">&#10094;</a>
+                    <a class="prev" onclick="moveSlides(1, 2)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 2)"></span>
+                        <span class="dot" onclick="currentSlide(2, 2)"></span>
+                    </div>
+                </div>
+                <img alt="prettier fwower">
+            </div>
+            <div class="slide3_container">
+                <img alt="pretty fwower">
+                <div class="text_container">
+                    <div class="slide3">
+                        <h1>Title3</h1>
+                        <p>lots of words about flowers</p>
+                    </div>
+                    <div class="slide3">
+                        <h1>Price</h1>
+                        <p>lots of words about the price of flowers</p>
+                    </div>
+                    <a class="prev" onclick="moveSlides(-1, 3)">&#10094;</a>
+                    <a class="prev" onclick="moveSlides(1, 3)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 3)"></span>
+                        <span class="dot" onclick="currentSlide(2, 3)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide4_container">
+                <div class="text_container">
+                    <div class="slide4">
+                        <h1>Title4</h1>
+                        <p>lots of words about flowers</p>
+                    </div>
+                    <div class="slide4">
+                        <h1>Price</h1>
+                        <p>lots of words about the price of flowers</p>
+                    </div>
+                    <a class="prev" onclick="moveSlides(-1, 4)">&#10094;</a>
+                    <a class="prev" onclick="moveSlides(1, 4)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 4)"></span>
+                        <span class="dot" onclick="currentSlide(2, 4)"></span>
+                    </div>
+                </div>
+                <img alt="pretty fwower">
+            </div>
+        </div>
+    </main>
+    <script>
+        let slideIndex = [1, 1, 1, 1, 1];
+        let slideId = ["floral_slides", "slide1", "slide2", "slide3", "slide4"]
+
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+        showSlides(1, 3);
+        showSlides(1, 4);
+
+        function currentSlide(index, id){
+            showSlides(slideIndex[id] = index, id);
+        }
+
+        function moveSlides(index, id){
+            showSlides(slideIndex[id]+=index, id);
+        }
+
+        function showSlides(index, id){
+            let i;
+            let slide = document.getElementsByClassName(slideId[id]);
+            if (index > slide.length) {slideIndex[id] = 1}
+            if (index < 1) {slideIndex[id] = slide.length}
+            for(i = 0; i < slide.length; i++){
+            slide[i].style.display = "none";
+            }
+            slide[slideIndex[id]-1].style.display = "block";
+        }
+    </script>
+    <footer>
+        <h1>Petal & Pins</h1>
+        <h3>email</h3>
+        <div class="socials">
+            <img alt="facebook">
+            <img alt="instagram">
+            <img alt="tik tok">
+            <img alt="youtube">
+        </div>
+    </footer>
+</body>
+</html> 

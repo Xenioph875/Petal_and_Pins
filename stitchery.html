@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitchery</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><div>Home</div></a>
+            <a href="stitchery.html"><div>Stitchery</div></a>
+            <img src="images/petal_and_pins_logo.jpeg" alt="Petal & Pins" style="height:150px">
+            <a href="pressed_flowers.html"><div>Pressed Petals</div></a>
+            <a href="other.html"><div>Other</div></a>
+        </nav>
+        <div class="hero-image">
+            <img src="images/stitchery-hero.jpeg" alt="place-holder">
+        </div>
+    </header>
+    <main>
+        <h1 style="margin:50px 0">Collections</h1>
+        <div class="collections">            
+            <div id="fireworks_card">
+                <h1>4th of July</h1>
+                <div class="fireworks_slides">
+                    <img alt="firework shirt">
+                    <div id="4th_of_july_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="fireworks_slides">
+                    <img alt="hot dog shirt">
+                    <div id="4th_of_july_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="fireworks_slides">
+                    <img alt="parade shirt">
+                    <div id="4th_of_july_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <a class="prev" onclick="moveSlides(-1, 0)">&#10094;</a>
+                <a class="prev" onclick="moveSlides(1, 0)">&#10095;</a>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1, 0)"></span>
+                    <span class="dot" onclick="currentSlide(2, 0)"></span>                    
+                    <span class="dot" onclick="currentSlide(3, 0)"></span>
+                </div>
+            </div>
+
+            <div id="western_card">
+                <h1>Western</h1>
+                <div class="western_slides">
+                    <img alt="img 1">
+                    <div id="western_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="western_slides">
+                    <img alt="img 2">
+                    <div id="western_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="western_slides">
+                    <img alt="img 3">
+                    <div id="western_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <a class="prev" onclick="moveSlides(-1, 1)">&#10094;</a>
+                <a class="prev" onclick="moveSlides(1, 1)">&#10095;</a>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1, 1)"></span>
+                    <span class="dot" onclick="currentSlide(2, 1)"></span>                    
+                    <span class="dot" onclick="currentSlide(3, 1)"></span>
+                </div>
+            </div>
+
+            <div id="outdoors_card">
+                <h1>Great Outdoors</h1>
+                <div class="outdoors_slides">
+                    <img alt="camping shirt">
+                    <div id="outdoors_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="outdoors_slides">
+                    <img alt="camping shirt">
+                    <div id="outdoors_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="outdoors_slides">
+                    <img alt="camping shirt">
+                    <div id="outdoors_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <a class="prev" onclick="moveSlides(-1, 2)">&#10094;</a>
+                <a class="prev" onclick="moveSlides(1, 2)">&#10095;</a>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1, 2)"></span>
+                    <span class="dot" onclick="currentSlide(2, 2)"></span>                    
+                    <span class="dot" onclick="currentSlide(3, 2)"></span>
+                </div>
+            </div>
+
+            <div id="custom_card">
+                <h1>Custom Creations</h1>
+                <div class="custom_slides">
+                    <img alt="custom shirt">
+                    <div id="custom_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="custom_slides">
+                    <img alt="custom shirt">
+                    <div id="custom_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <div class="custom_slides">
+                    <img alt="custom shirt">
+                    <div id="custom_text">
+                        <h5>Title of shirt</h5>
+                        <h5>Price: $</h5>
+                        <h5>Sizes: </h5>
+                    </div>
+                </div>
+                <a class="prev" onclick="moveSlides(-1, 3)">&#10094;</a>
+                <a class="prev" onclick="moveSlides(1, 3)">&#10095;</a>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1, 3)"></span>
+                    <span class="dot" onclick="currentSlide(2, 3)"></span>                    
+                    <span class="dot" onclick="currentSlide(3, 3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="materials_container">
+            <div class="materials">
+                <img alt="patch">
+                <div class="fabric_grid">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                </div>
+                <h1>Patch 1</h1>
+            </div>
+            <div class="materials">
+                <img alt="patch">
+                <div class="fabric_grid">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                </div>
+                <h1>Patch 2</h1>
+            </div>
+            <div class="materials">
+                <img alt="patch">
+                <div class="fabric_grid">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                    <img alt="fabric">
+                </div>
+                <h1>Patch 3</h1>
+            </div>
+            <a class="prev" onclick="moveSlides(-1, 4)">&#10094;</a>
+            <a class="prev" onclick="moveSlides(1, 4)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 4)"></span>
+            <span class="dot" onclick="currentSlide(2, 4)"></span>
+            <span class="dot" onclick="currentSlide(3, 4)"></span>
+        </div>
+    </main>
+    <script>
+        let slideIndex = [1, 1, 1, 1, 1];
+        let slideId = ["fireworks_slides", "western_slides", "outdoors_slides", "custom_slides", "materials"]
+
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+        showSlides(1, 3);
+        showSlides(1, 4);
+
+        function currentSlide(index, id){
+            showSlides(slideIndex[id] = index, id);
+        }
+
+        function moveSlides(index, id){
+            showSlides(slideIndex[id]+=index, id);
+        }
+
+        function showSlides(index, id){
+            let i;
+            let slide = document.getElementsByClassName(slideId[id]);
+            if (index > slide.length) {slideIndex[id] = 1}
+            if (index < 1) {slideIndex[id] = slide.length}
+            for(i = 0; i < slide.length; i++){
+            slide[i].style.display = "none";
+            }
+            slide[slideIndex[id]-1].style.display = "block";
+        }
+    </script>
+    <footer>
+        <h1>Petal & Pins</h1>
+        <h3>email</h3>
+        <div class="socials">
+            <img alt="facebook">
+            <img alt="instagram">
+            <img alt="tik tok">
+            <img alt="youtube">
+        </div>
+    </footer>
+</body>
+</html> 
